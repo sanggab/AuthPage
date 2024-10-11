@@ -30,4 +30,20 @@ final class AuthPageUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
+    
+    func testVerification() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let verificationBtn = app.otherElements["인증"].firstMatch
+        
+        verificationBtn.tap()
+        
+        
+    }
+    
+    func testManage() throws {
+        
+    }
+    
 }

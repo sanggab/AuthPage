@@ -14,15 +14,15 @@ struct ContentView: View {
         VStack(spacing: 12) {
             imageView
             
-            Text("Please complete an additional\n verification step.")
+            Text("이것은 첫 번째 타이틀 \n 여러 줄이 될 수 있다. 대응하자")
                 .multilineTextAlignment(.center)
                 .padding(.top, 20)
             
-            Text("가나다라 마바사 가나다라 심상갑이다 가나다라 마바사\n 아아 이것은 테스트 너무 길어 문자 문자 너무 길어")
+            Text("가나다라 마바사 가나다라 심상갑이다 가나다라 마바사\n 아아 이것은 테스트 너무 길어 문자 문자 너무 길어 그만 그만 여러줄 너무 많아 근데 퇴근 시켜줘")
                 .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 16)
-        .background(.mint)
+//        .background(.mint)
         
         Spacer()
         
@@ -32,14 +32,14 @@ struct ContentView: View {
                 .frame(height: 50)
                 .cornerRadius(25)
                 .overlay {
-                    Text("Verification")
+                    Text("인증")
                 }
                 .padding(.horizontal, 16)
-                .accessibilityLabel("Verification")
+                .accessibilityLabel("인증")
             
-            Text("Manage account")
+            Text("관리")
                 .underline(color: .gray)
-                .accessibilityLabel("ManageButton")
+                .accessibilityLabel("관리")
         }
         .padding(.bottom, 24)
     }

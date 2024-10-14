@@ -31,19 +31,22 @@ final class AuthPageUITestsLaunchTests: XCTestCase {
         add(attachment)
     }
     
-    func testVerification() throws {
+    func testPageOne() throws {
         let app = XCUIApplication()
         app.launch()
         
-        let verificationBtn = app.otherElements["인증"].firstMatch
-        
+        let verificationBtn = app.staticTexts["PageOneVerification"].firstMatch
+        let manageBtn = app.staticTexts["PageOneManage"].firstMatch
+        manageBtn.tap()
         verificationBtn.tap()
-        
-        
     }
     
-    func testManage() throws {
+    func testPageTWo() throws {
+        let app = XCUIApplication()
+        app.launch()
         
+        let manageBtn = app.staticTexts["PageTwoManage"].firstMatch
+        manageBtn.tap()
     }
     
 }

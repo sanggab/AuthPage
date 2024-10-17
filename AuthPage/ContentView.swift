@@ -19,30 +19,32 @@ struct ContentView: View {
 private extension ContentView {
     @ViewBuilder
     var pageOne: some View {
-        VStack(spacing: .zero) {
-            Spacer()
-            
-            VStack(spacing: 12) {
-                pageOneImageView
+        ZStack {
+            VStack(spacing: .zero) {
+                Spacer()
                 
-                pageOneFirstTitleLabel
+                VStack(spacing: 12) {
+                    pageOneImageView
+                    
+                    pageOneFirstTitleLabel
+                    
+                    pageOneSecondTitleLabel
+                    
+//                    Text(authType?.stringValue ?? "")
+                }
                 
-                pageOneSecondTitleLabel
+                Spacer()
                 
-//                Text(authType?.stringValue ?? "")
+                VStack(spacing: 25) {
+                    pageOneVerificationBtn
+                    
+                    pageOneManageBtn
+                }
+                .padding(.bottom, 24)
             }
-            
-            Spacer()
-            
-            VStack(spacing: 25) {
-                pageOneVerificationBtn
-                
-                pageOneManageBtn
-            }
-            .padding(.bottom, 24)
+            .padding(.horizontal, 16)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(.horizontal, 16)
     }
     
     @ViewBuilder
